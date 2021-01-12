@@ -1,7 +1,10 @@
 # Code, data, and idea sharing 
 
+Modified online.
+
 Some resources to get you started.
 
+<<<<<<< HEAD
 - Install R: https://muug.ca/mirror/cran/
 
 
@@ -24,4 +27,8 @@ Hopefully RStudio can find git.  If not, quit and re-launch RStudio
 For more help in getting _git_ set up for _RStudio_ see also: https://support.rstudio.com/hc/en-us/articles/200532077?version=1.2.5001
 
 
+=======
+Download R: https://muug.ca/mirror/cran/
+Download RStudio Desktop: https://rstudio.com/products/rstudio/#rstudio-desktop
+>>>>>>> cc3e9968de0105b756056fe7b74d3fc2a0c60e75
 
