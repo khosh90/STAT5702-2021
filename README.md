@@ -38,7 +38,7 @@ When you make a new project, _RStudio_ will *clone* the repo (download a local c
 - Make some changes in _RStudio_ and *commit* them, but don't *push* them yet.  
 - Then make some changes to files directly from github.com and *commit* (save) them.  The online changes have been saved to the main (online) repo, but your _RStudio_ changes are modifications of an earlier version of that repo. 
 - Now go back to _RStudio_ and try to *push* your latest *commit*.  You will get an error saying that you need to *pull* first.
-- Now try to *pull* the latest from online and you'll need to *merge* the online and local repo versions.  It's not as messy as it sounds and it's handled pretty well when viewed using the differences via *diff*.  
+- Now try to *pull* the latest from online and you'll need to *merge* the online and local repo versions.  It's not as messy as it sounds and it's handled pretty well via the _auto merge_.  You can also view the differences via *diff*.  
 - Once the *pull* (and necessary *merge*) is complete you can *commit* and *push* your changes to the online repo.  
 
 
