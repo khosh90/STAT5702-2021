@@ -2,8 +2,7 @@
 
 
 Some resources to get you started.
-
-
+Adding noise
 - Install R: https://muug.ca/mirror/cran/
 
 
