@@ -1,4 +1,4 @@
-# Code, data, and idea sharing 
+# Installing Tools
 
 
 Some resources to get you started.
