@@ -1,4 +1,4 @@
-# step 8
+# 
 # This is the user-interface definition of a Shiny web application. You can
 # run the application by clicking 'Run App' above.
 #
@@ -13,7 +13,7 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Step 8: Population Data"),
+  titlePanel("Population Data"),
   # Include radio buttons  (Only one of these can be selected)
   radioButtons("dataSource", "",
                c("Data Source 2006" = "DataFile2006",
@@ -61,7 +61,7 @@ shinyUI(fluidPage(
       # format of conditionalPanel is:
       # conditionalPanel(condition, stuff2do1, stuff2do2,...)
       conditionalPanel(
-        condition = "input.DensityLogical == true",   #Note th lowercase logical
+        condition = "input.DensityLogical == 'TRUE'",   #check the logical lower/upper case
         helpText(HTML("<h3>You might want to adjust the boundary estimate</h3>")),  #This is just big text
         checkboxInput("BoundaryCorrect", strong("Correct the density plot at zero?"), FALSE)  #This is a new input
         #
@@ -79,14 +79,10 @@ shinyUI(fluidPage(
       # Those 2 tabs will use different variables
       # But they could do totally different things
       # 
-      navbarPage(title = "Select a Plot:",
-                    tabPanel("Population Data", plotOutput("PopPlot")),
+        tabsetPanel(type = "tabs",
+                    tabPanel("Some tab title", plotOutput("PopPlot")),
                     tabPanel("Private Dwellings", plotOutput("DwellPlot"))
-        ),
-      h1("Note:"),
-      p("All plots are rendered when the page load.  The 'Select a Plot' tab just shows or hide plots.
-        We have not coded any reactive variables or changes in analysis based on tabs.
-        It's worth noticing that this text is constant and only the tabs panel changes.")
+        )
     )
       
   )
