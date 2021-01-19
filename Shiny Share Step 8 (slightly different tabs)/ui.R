@@ -1,4 +1,4 @@
-# 
+# step 8
 # This is the user-interface definition of a Shiny web application. You can
 # run the application by clicking 'Run App' above.
 #
@@ -13,7 +13,7 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Population Data"),
+  titlePanel("Step 8: Population Data"),
   # Include radio buttons  (Only one of these can be selected)
   radioButtons("dataSource", "",
                c("Data Source 2006" = "DataFile2006",
@@ -79,10 +79,14 @@ shinyUI(fluidPage(
       # Those 2 tabs will use different variables
       # But they could do totally different things
       # 
-        tabsetPanel(type = "tabs",
-                    tabPanel("Some tab title", plotOutput("PopPlot")),
+      navbarPage(title = "Select a Plot:",
+                    tabPanel("Population Data", plotOutput("PopPlot")),
                     tabPanel("Private Dwellings", plotOutput("DwellPlot"))
-        )
+        ),
+      h1("Note:"),
+      p("All plots are rendered when the page load.  The 'Select a Plot' tab just shows or hide plots.
+        We have not coded any reactive variables or changes in analysis based on tabs.
+        It's worth noticing that this text is constant and only the tabs panel changes.")
     )
       
   )
