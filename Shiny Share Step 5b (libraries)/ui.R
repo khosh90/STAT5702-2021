@@ -32,27 +32,39 @@ value = 30)
 
 # Main panel for displaying outputs ----
 mainPanel(
-HTML("<h1>Title goes here</h1><br><p>This is how you put words into the tabs with plots</p>
-     <p> This is basic HTML code inserted as an argument to the <em>mainPanel()</em> that will 
-     make it easier to some domain expertise to your shiny app.
-     <p> Remember that communication and domain expertise are important aspects of data science.
-     Note that I'm installing and loading libraries so the first time this page is accessed it will take a little longer"),
+
 # Output: plot
-#plotOutput(outputId = "word"),
+    column(12,  
+           HTML("<h1>Map of Canada.</h1>")),
 plotOutput(outputId = "world"),
-HTML("<p>Below is a table of the LOCALLY installed packages that were installed using my 'checkpackages.R' function. 
-These were installed into my app directory by my server.R file.   
-     See the announcement (and code) for how to install more packages"),
-column(12,
+
+column(12,  
+       # HTML("<h2>Working from.</h1>"),
+       # 
+       # textOutput('Where'),
+       HTML("<h1>Here is a list of installed packages.</h1>"),
+       
+       textOutput('PkgNames'),
+       
+       HTML("<h2>Here is a list of LOCALLY installed packages.</h2>"),
+       
+       textOutput('PkgNamesLoc'),
+       
+    
+       HTML("<h3>Below is a table of all of the installed packages.
+It's easiest if you install packages locally.</h3>"),
        dataTableOutput('tableLoc'),
-       HTML("<p>Below is a table of all of the installed packages.  
-     See the announcement (and code) for how to install more packages"),
+       HTML("<p>Below is a table of all of the locally installed packages.  
+     It's easiest if you install packages locally.</p>"),
        column(12,
               dataTableOutput('table')
-       )
+       ),
+
        
 )
 )
 )
 )
 )
+
+
